@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sam — Portfolio</title>
+
+  <!-- Fonts / Icons / GSAP -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<canvas id="particleCanvas"></canvas>
+
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+  <img src="images/logo.png" alt="Sam Logo">
+</div>
+
+    <div class="nav-links">
+      <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+      <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+      
+    </div>
+  </nav>
+
+  <!-- HERO -->
+ <main class="hero">
+  <div class="left">
+    <h1>
+      Hi There! <span class="wave">👋🏻</span><br>
+      I’m Sam Lawrance
+    </h1>
+<!-- Typing Section -->
+<div class="typing-wrapper">
+  <div class="static-text">Turning ideas into Reality as</div>
+  <div class="typing" id="typing"></div>
+</div>
+      <div class="connect-title">Connect with me</div>
+      <div class="social" aria-hidden="false">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vsamlawrance@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/sam-lawrance/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://wa.me/+919894426484" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://github.com/vsamlawrance" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Robot -->
+    <div class="robot-wrap" id="robotWrap">
+      <div class="glow-ring" aria-hidden="true"></div>
+  <div class="glow-ring" aria-hidden="true"></div>
+      <!-- SVG robot: head + eyes + wires + body -->
+      <svg class="robot-svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" id="robotSVG" role="img" aria-label="Animated robot">
+        <defs>
+          <filter id="neonBlur" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <linearGradient id="metal" x1="0" x2="1">
+            <stop offset="0" stop-color="#111421"/>
+            <stop offset="1" stop-color="#1e2530"/>
+          </linearGradient>
+          <linearGradient id="glass" x1="0" x2="1">
+            <stop offset="0" stop-color="#2e4052"/>
+            <stop offset="1" stop-color="#0f1720"/>
+          </linearGradient>
+          <radialGradient id="eyeGlow" cx="50%" cy="50%" r="80%">
+            <stop offset="0%" stop-color="#9ef1ff" stop-opacity="1"/>
+            <stop offset="40%" stop-color="#4dabf7" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#0b2230" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        
+
+        <!-- wires behind -->
+        <g id="wires" stroke="#4dabf7" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+          <path id="wire1" d="M60 300 C110 260, 160 240, 210 230" stroke-linejoin="round"/>
+          <path id="wire2" d="M360 300 C310 260, 260 240, 210 230" stroke-linejoin="round"/>
+          <path id="wire3" d="M100 340 C150 320, 180 300, 210 290" stroke-linejoin="round"/>
+          <path id="wire4" d="M320 340 C270 320, 240 300, 210 290" stroke-linejoin="round"/>
+        </g>
+
+        <!-- body -->
+        <g id="body" transform="translate(70,120)">
+          <rect x="70" y="100" width="220" height="240" rx="24" fill="url(#metal)" stroke="#2e8fbf" stroke-width="3" filter="url(#neonBlur)"/>
+          <rect x="110" y="140" width="140" height="140" rx="12" fill="url(#glass)" stroke="#173d54" stroke-width="2"/>
+          <!-- inner panel stripes -->
+          <g opacity="0.12" transform="translate(110,140)">
+            <rect x="8" y="8" width="124" height="14" rx="7" fill="#4dabf7"/>
+            <rect x="8" y="34" width="96" height="10" rx="5" fill="#4dabf7"/>
+            <rect x="8" y="58" width="110" height="6" rx="3" fill="#4dabf7"/>
+          </g>
+          <!-- small indicator lights -->
+          <g transform="translate(160,214)">
+            <circle class="led" cx="-40" cy="4" r="6" fill="#2bffea" opacity="0.95" />
+            <circle class="led" cx="0" cy="4" r="6" fill="#9ef1ff" opacity="0.8"/>
+            <circle class="led" cx="40" cy="4" r="6" fill="#4dabf7" opacity="0.7"/>
+          </g>
+        </g>
+
+        <!-- head group (we will rotate this group) -->
+        <g id="headGroup" transform="translate(70,28)">
+          <!-- neck -->
+          <rect x="190" y="140" width="40" height="18" rx="6" fill="#0e1620" stroke="#183345" stroke-width="2" />
+          <!-- head box -->
+          <g id="head" transform="translate(120,12)">
+            <rect x="0" y="0" rx="18" ry="18" width="180" height="120" fill="url(#metal)" stroke="#4dabf7" stroke-width="3" filter="url(#neonBlur)"></rect>
+
+            <!-- mouth display -->
+            <rect x="24" y="70" width="132" height="20" rx="8" fill="#061219" opacity="0.9"/>
+            <g id="mouthPixels" fill="#4dabf7" transform="translate(36,76)" opacity="0.9">
+              <rect x="0" y="0" width="10" height="8" rx="2"></rect>
+              <rect x="16" y="0" width="10" height="8" rx="2"></rect>
+              <rect x="32" y="0" width="10" height="8" rx="2"></rect>
+              <rect x="48" y="0" width="10" height="8" rx="2"></rect>
+              <rect x="64" y="0" width="10" height="8" rx="2"></rect>
+            </g>
+
+            <!-- eyes group -->
+            <g id="eyes" transform="translate(30,12)">
+              <!-- left eye shell -->
+              <g class="eyeShell" transform="translate(18,0)">
+                <circle cx="18" cy="28" r="26" fill="#071217" stroke="#0f2432" stroke-width="3"/>
+                <circle class="eyeGlow" cx="18" cy="28" r="18" fill="url(#eyeGlow)" opacity="0.45" filter="url(#neonBlur)"></circle>
+                <circle class="pupil" cx="18" cy="28" r="10" fill="#cff9ff"></circle>
+                <!-- inner pupil core -->
+                <circle class="pupilCore" cx="18" cy="28" r="4" fill="#04394a"/>
+              </g>
+
+              <!-- right eye shell -->
+              <g class="eyeShell" transform="translate(102,0)">
+                <circle cx="18" cy="28" r="26" fill="#071217" stroke="#0f2432" stroke-width="3"/>
+                <circle class="eyeGlow" cx="18" cy="28" r="18" fill="url(#eyeGlow)" opacity="0.45" filter="url(#neonBlur)"></circle>
+                <circle class="pupil" cx="18" cy="28" r="10" fill="#cff9ff"></circle>
+                <circle class="pupilCore" cx="18" cy="28" r="4" fill="#04394a"/>
+              </g>
+            </g>
+
+            <!-- antenna -->
+            <g transform="translate(80,-12)">
+              <rect x="34" y="0" width="12" height="36" rx="6" fill="#18232f" stroke="#234855" stroke-width="2"/>
+              <circle cx="40" cy="-6" r="8" fill="#4dabf7" opacity="0.95" filter="url(#neonBlur)"/>
+            </g>
+          </g>
+        </g>
+
+      </svg>
+      <!-- Hover base under robot -->
+<div class="robot-base"></div>
+
+        <!-- Right Button Panel -->
+
+  <div class="robot-right">
+    <button class="btn-primary" onclick="window.open('docs/autoCV.pdf','_blank')">
+      <i class="fa-solid fa-file-arrow-down" style="margin-right:10px"></i> Download My CV
+    </button>
+
+    <button class="btn-secondary" onclick="window.location.href='projects.html'">
+      <i class="fa-solid fa-arrow-right" style="margin-right:8px"></i> Explore My Work
+    </button>
+  </div>
+</main>
+
+
+ <!-- JS libraries -->
+
+<script src="script.js"></script>
+<script>
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+const particles = [];
+const numParticles = 80;
+
+for (let i = 0; i < numParticles; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2 + 1,
+    dx: (Math.random() - 0.5) * 1,
+    dy: (Math.random() - 0.5) * 1,
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#4dabf7';
+  particles.forEach((p) => {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+function update() {
+  particles.forEach((p) => {
+    p.x += p.dx;
+    p.y += p.dy;
+
+    if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+  });
+}
+
+function animate() {
+  draw();
+  update();
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+
+
+</body>
+</html>

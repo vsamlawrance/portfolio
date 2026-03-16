@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Sam Lawrance V</title>
+  <link rel="stylesheet" href="about.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Devicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+  <img src="images/logo.png" alt="Sam Logo">
+</div>
+    <ul class="nav-links">
+      <div class="nav-links">
+      <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+      <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+      
+    </ul>
+  </nav>
+
+  <!-- ABOUT -->
+  <section class="about-container">
+    <div class="about-left">
+        <h1>About Me</h1>
+  <p>
+    Hi, I’m <span class="highlight">Sam Lawrance V</span>, a passionate <span class="highlight">designer</span> and <span class="highlight">developer</span> who loves creating meaningful digital experiences. I hold a <span class="highlight">Bachelor’s degree in Computer Science Engineering</span> from <span class="highlight">Rajalakshmi Engineering College</span>.
+  </p>
+  <p>
+    I have hands-on experience working with <span class="highlight">C#</span> and <span class="highlight">.NET</span> during my internship, focusing on <span class="highlight">application and software development</span>. My technical interests also extend to <span class="highlight">cryptography (Fernet encryption)</span> and innovative fields like <span class="highlight">blockchain</span> and <span class="highlight">machine learning</span>, which I explored in my final year project.
+  </p>
+  <p>
+    Alongside software, I’m deeply interested in <span class="highlight">UI/UX design</span> and <span class="highlight">web development</span>, where I enjoy bringing ideas to life through <span class="highlight">intuitive interfaces</span> and <span class="highlight">responsive designs</span>. I’m driven by <span class="highlight">curiosity</span>, <span class="highlight">creativity</span>, and the desire to build solutions that seamlessly merge <span class="highlight">design</span>, <span class="highlight">functionality</span>, and <span class="highlight">user experience</span>.
+  </p>
+    </div>
+    <div class="about-right">
+      <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" alt="Animated Robot" />
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section">
+    <h2>Technical Skills</h2>
+    <div class="icon-grid">
+      <div class="skill-box"><i class="devicon-c-plain"></i><span>C</span></div>
+      <div class="skill-box"><i class="devicon-csharp-plain"></i><span>C#</span></div>
+      <div class="skill-box"><i class="devicon-java-plain"></i><span>Java</span></div>
+      <div class="skill-box"><i class="devicon-python-plain"></i><span>Python</span></div>
+      <div class="skill-box"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+      <div class="skill-box"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+      <div class="skill-box"><i class="devicon-css3-plain"></i><span>CSS</span></div>
+      <div class="skill-box"><i class="devicon-dotnetcore-plain"></i><span>.NET</span></div>
+      <div class="skill-box"><i class="devicon-react-original"></i><span>React</span></div>
+      <div class="skill-box"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+      <div class="skill-box"><i class="fa-solid fa-database"></i><span>MS SQL</span></div>
+      <div class="skill-box"><i class="fa-solid fa-link"></i><span>Blockchain</span></div>
+      <div class="skill-box"><i class="fa-solid fa-server"></i><span>ADO.NET</span></div>
+      <div class="skill-box"><i class="devicon-tailwindcss-plain"></i><span>Tailwind</span></div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="tools-section">
+    <h2>Tools & Design</h2>
+    <div class="icon-grid">
+      <div class="skill-box"><i class="devicon-visualstudio-plain"></i><span>Visual Studio</span></div>
+      <div class="skill-box"><i class="devicon-vscode-plain"></i><span>VS Code</span></div>
+      <div class="skill-box"><i class="devicon-androidstudio-plain"></i><span>Android Studio</span></div>
+      <div class="skill-box"><i class="fa-solid fa-bug"></i><span>Swagger</span></div>
+      <div class="skill-box"><i class="fa-solid fa-paper-plane"></i><span>Postman</span></div>
+      <div class="skill-box"><i class="devicon-github-original"></i><span>GitHub</span></div>
+      <div class="skill-box"><i class="devicon-photoshop-plain"></i><span>Photoshop</span></div>
+      <div class="skill-box"><i class="fa-solid fa-scissors"></i><span>Premiere Pro</span></div>
+      <div class="skill-box"><i class="fa-solid fa-video"></i><span>DaVinci Resolve</span></div>
+      <div class="skill-box"><i class="devicon-figma-plain"></i><span>Figma</span></div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll animation
+    const boxes = document.querySelectorAll('.skill-box');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    boxes.forEach(box => observer.observe(box));
+  </script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects</title>
+
+  <link rel="stylesheet" href="projects.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo" />
+    </div>
+      <div class="nav-links">
+      <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+      <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+      
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="project-header">
+    <h1>My Projects</h1>
+    <p>Explore my featured development and design works.</p>
+  </header>
+
+  <!-- PROJECT GRID -->
+  <section id="projects" class="project-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card" data-modal="modal1">
+      <img src="images/p1.png" alt="Project 1" />
+      <h3>.NET Web Application for Employee Data Visualization</h3>
+      <p>Enterprise-level ASP.NET dashboard integrated with Tableau.</p>
+      <button class="info-btn">View Details</button>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card" data-modal="modal2">
+      <img src="images/d.jpg" alt="Project 2" />
+      <h3>Fake Profile Detection using Blockchain</h3>
+      <p>Blockchain-secured system detecting fake profiles using ML.</p>
+      <button class="info-btn">View Details</button>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card" data-modal="modal3">
+      <img src="images/p3.png" alt="Project 3" />
+      <h3>Smart Plant & Machinery Viewer | Android Web Portal App</h3>
+      <p>Developed a web-based digital document viewer for new employees to easily understand plant machines, their models, and working through organized PDFs and instructional videos.</p>
+      <button class="info-btn">View Details</button>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="project-card" data-modal="modal4">
+      <img src="images/p4.png" alt="Project 4" />
+      <h3>Inventory Management System using DBMS</h3>
+      <p>Designed and developed an Inventory Management System using DBMS to efficiently handle product records, supplier details, and stock updates through an interactive SQL-based interface.</p>
+      <button class="info-btn">View Details</button>
+    </div>
+
+    <!-- PROJECT 5 -->
+    <div class="project-card" data-modal="modal5">
+      <img src="images/p5.png" alt="Project 5" />
+      <h3>AI Meal Plan Generator</h3>
+      <p>An AI-powered web app that generates personalized meal plans based on user preferences, dietary goals, and nutrition needs.
+Built using Flask and OpenAI API, it recommends balanced meals with recipe and calorie insights in real time.</p>
+      <button class="info-btn">View Details</button>
+    </div>
+
+    <!-- PROJECT 6 -->
+    <div class="project-card" data-modal="modal6">
+      <img src="images/Fernet.png" alt="Project 6" />
+      <h3>C#-Based Fernet Encryption and Decryption Web Application</h3>
+      <p>A custom-built Fernet encryption and decryption web app developed entirely in C#.</p>
+      <button class="info-btn">View Details</button>
+    </div>
+            <!-- PROJECT 7 -->
+    <div class="project-card" data-modal="modal7">
+      <img src="images/iot.png" alt="Project 7" />
+      <h3>Smart Water Controlling Pump using IoT</h3>
+      <p>Designed an IoT-based smart pump system using Arduino/ESP8266 and Blynk to automate water usage through real-time sensor monitoring and mobile control.</p>
+      <button class="info-btn">View Details</button>
+    </div>
+
+        <!-- PROJECT 8 -->
+        <div class="project-card" data-modal="modal8">
+          <img src="images/rpa.png" alt="Project 8" />
+          <h3>Automated Job Offer Management System</h3>
+          <p>Built using UiPath RPA in UiPath Studio, this project automates the job offer process by streamlining data entry, document handling, and workflow execution.</p>
+          <button class="info-btn">View Details</button>
+        </div>
+
+                <!-- PROJECT  9-->
+                <div class="project-card" data-modal="modal9">
+                  <img src="images/speech.png" alt="Project 9" />
+                  <h3>Speech Emotion Recognition Using Deep Learning</h3>
+                  <p>Built a Speech Emotion Recognition system using Python and decision tree-based ML techniques to classify emotions from audio data with 80% accuracy.</p>
+                  <button class="info-btn">View Details</button>
+                </div>
+        
+
+  </section>
+
+<!-- MODAL 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    
+    <h2>.NET Web Application for Employee Data Visualization</h2>
+    
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/p1.png" alt=".NET Project Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        This ASP.NET web application was developed using the .NET Framework with ADO.NET for efficient database connectivity and data management. The system retrieves employee information from SQL Server through stored procedures, processes their details—including CTC and increment percentages for employees below the Managing Director—and securely stores them in the database. 
+      </p>
+      <p>
+        Data visualization is seamlessly integrated using a Tableau dashboard connected to the application for real-time insights. The project was built in Visual Studio using C# as the core programming language, ensuring modular and maintainable code structure. 
+      </p>
+      <p>
+        Security measures include password hashing and Base64 string encoding, along with session management for user authentication and secure data handling. Additionally, the application features dynamic form entries, allowing users to select multiple years and input corresponding performance ratings, providing flexibility and scalability in employee data analysis.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+
+<!-- MODAL 2 -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Fake Profile Detection using Blockchain</h2>
+
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/f.jpg" alt="Fake Profile Detection using Blockchain Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        This Flask-based web application integrates machine learning and blockchain to detect and record fake social media profiles securely. The system extracts several key features such as profile picture availability, username structure, biography length, external URL presence, and engagement metrics including followers, following, and post counts.
+      </p>
+      <p>
+        Using ensemble machine learning models like Gradient Boosting, Random Forest, and Support Vector Machine, the system classifies whether a profile is genuine or fake with high accuracy. Each verification result is then stored on a blockchain ledger, ensuring transparency and immutability of data. 
+      </p>
+      <p>
+        The project includes a clean Flask-based interface for users to submit profiles and view detection results, backed by a SQL database for record storage and model updates. This integration of AI with blockchain enhances online authenticity verification, providing a secure, auditable, and tamper-proof solution for identifying fake profiles.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+
+<!-- MODAL 3 -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Digital Document Viewer Web Application</h2>
+
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/p3.png" alt="Digital Document Viewer Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        This web-based document management system was designed for a production company to efficiently organize and view all digital files related to their machines, including technical PDFs, manuals, and product demonstration videos. The application provides a centralized interface optimized for large TV screens, ensuring that operators and supervisors can quickly access and display important documents during production or maintenance.
+      </p>
+      <p>
+        Built using HTML, CSS, JavaScript, and ASP.NET with SQL Server as the backend, the system supports structured file categorization and secure storage. A key feature of the application is its integrated web viewer, which allows users to preview PDF and video content directly within the browser without requiring external software. Dynamic search and filter options were implemented to improve navigation across hundreds of documents.
+      </p>
+      <p>
+        The backend logic was developed using C# with ADO.NET for database connectivity and CRUD operations, while data was securely stored and retrieved through stored procedures. The design prioritizes responsiveness, user accessibility, and seamless integration with the company’s internal network. This project showcases my ability to combine backend logic, database management, and user-centered design in a practical, industry-oriented solution.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+
+<!-- MODAL 4 -->
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Inventory Management System using DBMS</h2>
+
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/p4.png" alt="Inventory Management System Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        This project focuses on designing and implementing an Inventory Management System using fundamental database management concepts. It enables efficient handling of product details, supplier information, stock levels, and transaction records to maintain real-time inventory tracking.
+      </p>
+      <p>
+        Developed using SQL as the core backend, the system utilizes relational database design principles including primary and foreign key constraints, normalization, and stored procedures to ensure data accuracy and consistency. It supports all CRUD operations such as adding, updating, deleting, and retrieving records through optimized SQL queries.
+      </p>
+      <p>
+        The application also includes trigger-based alerts for low stock levels and automatic logging of stock movement for better auditability. This project demonstrates my understanding of relational schema design, data modeling, query optimization, and database-driven application logic for managing large-scale inventory systems effectively.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+
+<!-- MODAL 5 -->
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>AI Meal Plan Generator</h2>
+
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/p5.png" alt="AI Meal Plan Generator Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        The AI Meal Plan Generator is a web-based application that leverages artificial intelligence to create personalized daily and weekly meal plans based on user preferences, health goals, and dietary restrictions. Users can input parameters like calorie goals, cuisine type, or protein requirements, and the system automatically generates balanced meals.
+      </p>
+      <p>
+        Built using <strong>Python (Flask)</strong> for the backend and <strong>OpenAI API</strong> for intelligent meal recommendation, the system dynamically generates meal combinations with nutritional details. The front end is designed with <strong>HTML, CSS, and JavaScript</strong> for a clean and intuitive interface. The app also includes features like recipe suggestions, grocery lists, and calorie summaries for a seamless meal planning experience.
+      </p>
+      <p>
+        This project demonstrates my ability to integrate AI-driven APIs with full-stack web applications, process user input efficiently, and deliver practical real-world automation using Flask, API calls, and responsive UI design.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+<!-- MODAL 6 -->
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>C#-Based Fernet Encryption and Decryption Web Application</h2>
+
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/fernet.png" alt="Fernet Encryption WebApp Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        This project is a secure web application developed using <strong>C#</strong> and <strong>.NET</strong> that implements the Fernet encryption standard manually to encrypt and decrypt sensitive data such as passwords and messages.
+      </p>
+      <p>
+        It follows cryptographic best practices to ensure both data confidentiality and integrity, allowing users to experience real-time encryption and decryption processes via a simple and efficient interface. The logic replicates how Fernet tokens are generated, validated, and decoded.
+      </p>
+      <p>
+        This project demonstrates my understanding of encryption algorithms, backend logic, and secure data handling, reflecting an in-depth grasp of how cryptographic methods can be implemented at the software level for real-world applications.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+<!-- MODAL 7 -->
+<div id="modal7" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Smart Water Controlling Pump using IoT</h2>
+
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/iot.png" alt="Smart Water Controlling Pump Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        The Smart Water Controlling Pump is an IoT-based automation system designed to efficiently monitor and control water levels in real-time using sensors and microcontrollers.
+      </p>
+      <p>
+        It automatically turns pumps ON or OFF based on tank levels, ensuring minimal water wastage and energy consumption. Users can also track the water status remotely through a connected interface.
+      </p>
+      <p>
+        Built using IoT components like Arduino, ultrasonic sensors, and Wi-Fi modules, this project demonstrates skills in embedded programming, sensor data integration, and IoT-based control systems for smart home and agricultural applications.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+<!-- MODAL 8 -->
+<div id="modal8" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Automated Job Offer Management System</h2>
+
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/rpa.png" alt="Automated Job Offer Management System Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        This web-based platform automates the process of generating, managing, and tracking job offers within an organization, reducing manual work and increasing operational efficiency.
+      </p>
+      <p>
+        The system enables HR personnel to input candidate details, generate automated offer letters, and monitor acceptance status. It includes validation checks and secure data storage to ensure reliability and accuracy.
+      </p>
+      <p>
+        Developed with a structured backend and responsive front-end design, this project highlights my skills in full-stack web development, workflow automation, and building enterprise-level management systems.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+<!-- MODAL 9 -->
+<div id="modal9" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Speech Emotion Recognition Using Deep Learning</h2>
+
+    <!-- Project Preview Image -->
+    <div class="modal-image">
+      <img src="images/speech.png" alt="Speech Emotion Recognition Preview" />
+    </div>
+
+    <div class="modal-text">
+      <p>
+        This project employs <strong>Deep Learning</strong> techniques to recognize human emotions from voice signals, enhancing user interaction for AI-based systems such as chatbots and customer service tools.
+      </p>
+      <p>
+        The model was trained on labeled speech datasets and extracts key features like MFCCs to classify emotions such as happiness, sadness, anger, and neutrality. Various neural network architectures were experimented with to improve accuracy.
+      </p>
+      <p>
+        The project demonstrates proficiency in <strong>Python</strong>, <strong>TensorFlow/Keras</strong>, and audio feature extraction, reflecting my understanding of applying deep learning models to real-world emotion recognition challenges.
+      </p>
+    </div>
+
+    <button class="close-bottom">Close</button>
+  </div>
+</div>
+
+
+  <script src="projects.js"></script>
+</body>
+</html>
